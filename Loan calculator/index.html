@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h2>Loan Calculator</h2>
+    <div class="container-wrapper">
+        <div class="container">
+            <p>Select Loan Product:</p>
+            <select id="loanProduct" onchange="setLoanValues()">
+                <option value="">--Select--</option>
+                <option value="Mortgage">Mortgage</option>
+                <option value="Education">Education</option>
+                <option value="Personal">Personal</option>
+            </select>
+            <p>Loan Amount:</p>
+            <input type="number" id="loanAmount">
+            <p>Annual Interest Rate:</p>
+            <input type="number" id="interestRate">
+            <p>Loan Tenure (months):</p>
+            <input type="number" id="loanTenure">
+            <button onclick="calculateLoan()">Calculate</button>
+            <h3 id="result"></h3>
+        </div>
+        <div class="schedule-container">
+            <h3>Repayment Schedule</h3>
+            <table id="schedule"></table>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
